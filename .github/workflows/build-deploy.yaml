@@ -1,13 +1,10 @@
 name: Docker Build Deploy
-
 on:
   push:
     branches: [ main ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: run shell script
@@ -19,7 +16,6 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:${{ github.sha }}
-
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
