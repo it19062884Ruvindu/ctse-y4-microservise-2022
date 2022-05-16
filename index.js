@@ -5,6 +5,9 @@ const port = 3000
 app.get('/', (req, res) => {
   res.send('Hello SLIIT!')
 })
+app.get('/temp', (req, res) => {
+  res.send('Welcome to sliit')
+})
 
 app.listen(port, () => {
   console.log(`app running on port ${port}`)
