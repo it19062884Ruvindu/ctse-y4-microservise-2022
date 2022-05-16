@@ -2,7 +2,7 @@ FROM node:18-alpine3.14
 
 WORKDIR /app
 
-copy . .
+COPY . .
 
 RUN npm i
 
