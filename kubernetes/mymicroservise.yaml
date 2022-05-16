@@ -3,11 +3,18 @@ kind: Deployment
 metadata:
   annotations:
     autopilot.gke.io/resource-adjustment: '{"input":{"containers":[{"name":"ctse-y4-microservise-2022-1"}]},"output":{"containers":[{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"name":"ctse-y4-microservise-2022-1"}]},"modified":true}'
-    deployment.kubernetes.io/revision: "1"
+    deployment.kubernetes.io/revision: "2"
+    gcb-build-id: 017fde38-304e-46b9-934b-84a8449f7566
+    gcb-trigger-id: 4839b31f-48c2-49fa-9cdd-2caca82e2858
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"autopilot.gke.io/resource-adjustment":"{\"input\":{\"containers\":[{\"name\":\"ctse-y4-microservise-2022-1\"}]},\"output\":{\"containers\":[{\"limits\":{\"cpu\":\"500m\",\"ephemeral-storage\":\"1Gi\",\"memory\":\"2Gi\"},\"requests\":{\"cpu\":\"500m\",\"ephemeral-storage\":\"1Gi\",\"memory\":\"2Gi\"},\"name\":\"ctse-y4-microservise-2022-1\"}]},\"modified\":true}","deployment.kubernetes.io/revision":"1","gcb-build-id":"017fde38-304e-46b9-934b-84a8449f7566","gcb-trigger-id":"4839b31f-48c2-49fa-9cdd-2caca82e2858"},"creationTimestamp":"2022-05-16T11:42:55Z","generation":2,"labels":{"app":"mymicroservise","app.kubernetes.io/managed-by":"gcp-cloud-build-deploy","app.kubernetes.io/name":"mymicroservise","app.kubernetes.io/version":"1ac374df26e09cf5f0de04d92c8b923e559c1a2d"},"managedFields":[{"apiVersion":"apps/v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:labels":{".":{},"f:app":{}}},"f:spec":{"f:progressDeadlineSeconds":{},"f:replicas":{},"f:revisionHistoryLimit":{},"f:selector":{},"f:strategy":{"f:rollingUpdate":{".":{},"f:maxSurge":{},"f:maxUnavailable":{}},"f:type":{}},"f:template":{"f:metadata":{"f:labels":{".":{},"f:app":{}}},"f:spec":{"f:containers":{"k:{\"name\":\"ctse-y4-microservise-2022-1\"}":{".":{},"f:image":{},"f:imagePullPolicy":{},"f:name":{},"f:resources":{},"f:terminationMessagePath":{},"f:terminationMessagePolicy":{}}},"f:dnsPolicy":{},"f:restartPolicy":{},"f:schedulerName":{},"f:securityContext":{},"f:terminationGracePeriodSeconds":{}}}}},"manager":"GoogleCloudConsole","operation":"Update","time":"2022-05-16T11:42:55Z"},{"apiVersion":"apps/v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{"f:deployment.kubernetes.io/revision":{}}},"f:status":{"f:availableReplicas":{},"f:conditions":{".":{},"k:{\"type\":\"Available\"}":{".":{},"f:lastTransitionTime":{},"f:lastUpdateTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}},"k:{\"type\":\"Progressing\"}":{".":{},"f:lastTransitionTime":{},"f:lastUpdateTime":{},"f:message":{},"f:reason":{},"f:status":{},"f:type":{}}},"f:observedGeneration":{},"f:readyReplicas":{},"f:replicas":{},"f:updatedReplicas":{}}},"manager":"kube-controller-manager","operation":"Update","time":"2022-05-16T11:42:59Z"}],"name":"mymicroservise","namespace":"default","resourceVersion":"581830","uid":"f96255b6-cfef-4fcb-b84e-eea77b19e341"},"spec":{"progressDeadlineSeconds":600,"replicas":1,"revisionHistoryLimit":10,"selector":{"matchLabels":{"app":"mymicroservise"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"annotations":{"gcb-build-id":"017fde38-304e-46b9-934b-84a8449f7566","gcb-trigger-id":"4839b31f-48c2-49fa-9cdd-2caca82e2858"},"creationTimestamp":null,"labels":{"app":"mymicroservise","app.kubernetes.io/managed-by":"gcp-cloud-build-deploy","app.kubernetes.io/name":"mymicroservise","app.kubernetes.io/version":"1ac374df26e09cf5f0de04d92c8b923e559c1a2d"}},"spec":{"containers":[{"image":"gcr.io/fresh-base-350308/github.com/it19062884ruvindu/ctse-y4-microservise-2022@sha256:3ee283f9abc47cefe0b84e7147b0dc95f86f69ff11953b7c197b877057f6c38b","imagePullPolicy":"IfNotPresent","name":"ctse-y4-microservise-2022-1","resources":{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"}},"securityContext":{"capabilities":{"drop":["NET_RAW"]}},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File"}],"dnsPolicy":"ClusterFirst","restartPolicy":"Always","schedulerName":"default-scheduler","securityContext":{"seccompProfile":{"type":"RuntimeDefault"}},"terminationGracePeriodSeconds":30}}},"status":{"availableReplicas":1,"conditions":[{"lastTransitionTime":"2022-05-16T11:42:59Z","lastUpdateTime":"2022-05-16T11:42:59Z","message":"Deployment has minimum availability.","reason":"MinimumReplicasAvailable","status":"True","type":"Available"},{"lastTransitionTime":"2022-05-16T11:42:55Z","lastUpdateTime":"2022-05-16T11:42:59Z","message":"ReplicaSet \"mymicroservise-69fb47c554\" has successfully progressed.","reason":"NewReplicaSetAvailable","status":"True","type":"Progressing"}],"observedGeneration":2,"readyReplicas":1,"replicas":1,"updatedReplicas":1}}
   creationTimestamp: "2022-05-16T11:42:55Z"
-  generation: 2
+  generation: 3
   labels:
     app: mymicroservise
+    app.kubernetes.io/managed-by: gcp-cloud-build-deploy
+    app.kubernetes.io/name: mymicroservise
+    app.kubernetes.io/version: 1ac374df26e09cf5f0de04d92c8b923e559c1a2d
   managedFields:
   - apiVersion: apps/v1
     fieldsType: FieldsV1
@@ -36,7 +43,6 @@ metadata:
             f:containers:
               k:{"name":"ctse-y4-microservise-2022-1"}:
                 .: {}
-                f:image: {}
                 f:imagePullPolicy: {}
                 f:name: {}
                 f:resources: {}
@@ -50,6 +56,36 @@ metadata:
     manager: GoogleCloudConsole
     operation: Update
     time: "2022-05-16T11:42:55Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:gcb-build-id: {}
+          f:gcb-trigger-id: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+        f:labels:
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/version: {}
+      f:spec:
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:gcb-build-id: {}
+              f:gcb-trigger-id: {}
+            f:labels:
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+              f:app.kubernetes.io/version: {}
+          f:spec:
+            f:containers:
+              k:{"name":"ctse-y4-microservise-2022-1"}:
+                f:image: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2022-05-16T12:52:33Z"
   - apiVersion: apps/v1
     fieldsType: FieldsV1
     fieldsV1:
@@ -82,10 +118,10 @@ metadata:
         f:updatedReplicas: {}
     manager: kube-controller-manager
     operation: Update
-    time: "2022-05-16T11:42:59Z"
+    time: "2022-05-16T12:52:37Z"
   name: mymicroservise
   namespace: default
-  resourceVersion: "581830"
+  resourceVersion: "613534"
   uid: f96255b6-cfef-4fcb-b84e-eea77b19e341
 spec:
   progressDeadlineSeconds: 600
@@ -101,12 +137,18 @@ spec:
     type: RollingUpdate
   template:
     metadata:
+      annotations:
+        gcb-build-id: 017fde38-304e-46b9-934b-84a8449f7566
+        gcb-trigger-id: 4839b31f-48c2-49fa-9cdd-2caca82e2858
       creationTimestamp: null
       labels:
         app: mymicroservise
+        app.kubernetes.io/managed-by: gcp-cloud-build-deploy
+        app.kubernetes.io/name: mymicroservise
+        app.kubernetes.io/version: 1ac374df26e09cf5f0de04d92c8b923e559c1a2d
     spec:
       containers:
-      - image: gcr.io/fresh-base-350308/github.com/it19062884ruvindu/ctse-y4-microservise-2022:6b02070
+      - image: gcr.io/fresh-base-350308/github.com/it19062884ruvindu/ctse-y4-microservise-2022@sha256:3ee283f9abc47cefe0b84e7147b0dc95f86f69ff11953b7c197b877057f6c38b
         imagePullPolicy: IfNotPresent
         name: ctse-y4-microservise-2022-1
         resources:
@@ -141,12 +183,12 @@ status:
     status: "True"
     type: Available
   - lastTransitionTime: "2022-05-16T11:42:55Z"
-    lastUpdateTime: "2022-05-16T11:42:59Z"
-    message: ReplicaSet "mymicroservise-69fb47c554" has successfully progressed.
+    lastUpdateTime: "2022-05-16T12:52:37Z"
+    message: ReplicaSet "mymicroservise-6b4b474977" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  observedGeneration: 2
+  observedGeneration: 3
   readyReplicas: 1
   replicas: 1
   updatedReplicas: 1
