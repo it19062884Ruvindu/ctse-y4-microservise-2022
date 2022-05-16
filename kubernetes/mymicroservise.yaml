@@ -7,9 +7,6 @@ metadata:
     app.kubernetes.io/name: mymicroservise
     app.kubernetes.io/version: 1ac374df26e09cf5f0de04d92c8b923e559c1a2d
   name: mymicroservise
-  namespace: default
-  resourceVersion: "613534"
-  uid: f96255b6-cfef-4fcb-b84e-eea77b19e341
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
