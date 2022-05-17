@@ -42,7 +42,7 @@ mongoose.connection.once('open', () => {
 });
 
 app.route('/').get((req, res) => {
-    res.send('MicroService-01, __Product Distributing Site Managemt Backend__* Running with all Configurations !! (Pipe line, GIT, GCP, Docker, Kubernets )');
+    res.send('MicroService-01, __Product Distributing Site Managemt Backend__* Running with all Configurations !! (Pipe lines, GIT, GCP, Docker Hub, Kubernets )');
   //  res.send('Git updated, Pipeline fired, docarizing, containarizing , loded on GCP, Genarated by Public IP with Kubernet \n');
   //  res.send('(Backend by :- Ruvindu Kaushalya , CTSE Assignmet-03)');
 
