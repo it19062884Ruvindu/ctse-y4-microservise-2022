@@ -43,7 +43,7 @@ mongoose.connect('mongodb+srv://user-123:user-123@construction-management.sk0gl.
 
 mongoose.connection.once('open', () => {
     console.log('Database Connected...');
-    initial();
+    // initial();
     console.log('######################################################');
 });
 
@@ -52,8 +52,8 @@ app.route('/').get((req, res) => {
 });
 
 
-require('./src/routes/auth.routes')(app);
-require('./src/routes/user.routes')(app);
+// require('./src/routes/auth.routes')(app);
+// require('./src/routes/user.routes')(app);
 
 
 
@@ -65,23 +65,23 @@ app.listen(PORT, () => {
     console.log('...Wait DB connecting...');
 });
 
-const db = require("./src/modules");
-const Role = db.role;
+// const db = require("./src/modules");
+// const Role = db.role;
 
 
-  function initial() {
-    Role.estimatedDocumentCount((err, count) => {
-      if (!err && count === 0) {
-        new Role({
-          name: "user"
-        }).save(err => {
-          if (err) {
-            console.log("error", err);
-          }
+//   function initial() {
+//     Role.estimatedDocumentCount((err, count) => {
+//       if (!err && count === 0) {
+//         new Role({
+//           name: "user"
+//         }).save(err => {
+//           if (err) {
+//             console.log("error", err);
+//           }
   
-          console.log("added 'user' to roles collection");
-         console.log('######################################################');
-        });
-      }
-    });
-  }
+//           console.log("added 'user' to roles collection");
+//          console.log('######################################################');
+//         });
+//       }
+//     });
+//   }
